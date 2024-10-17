@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Daftar Pengguna</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Nomor Telepon</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="usersBody">
+            <!-- Data pengguna akan diisi di sini -->
+        </tbody>
+    </table>
+
+    <!-- Modal untuk Detail Posts -->
+    <div id="postsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('postsModal')">&times;</span>
+            <h2>Detail Posts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Judul</th>
+                    </tr>
+                </thead>
+                <tbody id="postsTableBody">
+                    <!-- Data posts akan diisi di sini -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal untuk Detail Albums -->
+    <div id="albumsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('albumsModal')">&times;</span>
+            <h2>Detail Albums</h2>
+            <ul id="albumsList">
+                <!-- Data albums akan diisi di sini -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal untuk Detail User -->
+    <div id="userDetailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('userDetailModal')">&times;</span>
+            <h2>Detail Pengguna</h2>
+            <p><strong>Nama:</strong> <span id="userName"></span></p>
+            <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            <p><strong>Nomor Telepon:</strong> <span id="userPhone"></span></p>
+            <p><strong>Alamat:</strong></p>
+            <p id="userAddress"></p>
+            <p><strong>Perusahaan:</strong> <span id="userCompany"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
